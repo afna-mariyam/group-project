@@ -38,7 +38,7 @@ const complaintSchema = new mongoose.Schema({
         type:String
     },
     mphone_no:{
-        type:Number,
+        type:String,
         required:true
     }
 })

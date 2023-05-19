@@ -94,6 +94,15 @@ router.post('/invreg', async (req,res)=>{
 
 });
 
+router.get('/fetchcomplaint', async (req, res) => {
+    try {
+      const comp = await Comp.find();
+      res.json(comp);
+    } catch (error) {
+      console.error('Error retrieving data', error);
+      res.status(500).json({ error: 'Failed to retrieve data' });
+    }
+  });
 
 router.post('/complaint', async (req,res)=>{
 
